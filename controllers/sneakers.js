@@ -10,9 +10,16 @@ Router.get("/sneakers", (req, res) => {
     Shoes
     .find({})
     .then(sneakers => {
-        res.render("sneakers-index", { shoes })
-    }
+        res.render("sneaker-index", { shoes })
+    })
 })
+// Router.get("/sneakers", (req, res) => {
+//     Shoes
+//     .find({})
+//     .then(sneakers => {
+//         res.render("sneakers-index", { shoes })
+//     }
+// })
 
 Router.get("/sneakers/:name", (req, res) => {
     Shoes

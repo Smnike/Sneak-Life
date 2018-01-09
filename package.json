@@ -20,6 +20,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
+    "materialize-css": "^1.0.0-alpha.3",
     "mongoose": "^4.13.9"
   }
 }
