@@ -1,21 +1,25 @@
 [
     {
-        "type": "Air Jordan - Retro 18's",
+        "type": "Retro 18's",
+        "brand": "Air Jordan",
         "price": 145,
         "Athletes": true
     },
     {
-        "type": "Keep - The RAMOS",
+        "type": "The RAMOS",
+        "brand": "Keep",
         "price": 105,
         "Athletes": false
     },
     {
-        "type": "Adidas - Crazy 8's",
+        "type": "Crazy 8's",
+        "brand": "Adidas",
         "price": 200,
         "Athletes": true
     },
     {
-        "type": "Nike - Air Force One",
+        "type": "Air Force One",
+        "brand": "Nike",
         "price": 90,
         "Athletes": false
     }
