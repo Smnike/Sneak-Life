@@ -8,5 +8,9 @@
     <input type="text" name="shoes[type]" placeholder="Shoe Name" value="{{shoes.name}}"/>
     <input type="number" name="shoes[price]" placeholder="Damage" value="{{shoes.price}}"/>
     <button type="submit">Update</button>
-
 </form>
+
+<form action="/sneakers/{{shoes.brand}}?_method=delete" method="post">
+    <button type="submit">Show Me!</button>
+</form>
+{{/unless}}
