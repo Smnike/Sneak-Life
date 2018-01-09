@@ -1,4 +1,4 @@
-const mongoose = require("../db/connection")
+const mongoose = require("mongoose")
 
 var ShoesSchema = new mongoose.Schema(
     {

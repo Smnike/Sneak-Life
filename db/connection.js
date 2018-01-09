@@ -1,5 +1,3 @@
-import { Promise } from "mongoose";
-
 // const mongoose = require("mongoose")
 const mongoose = require("./models/shoes")
 
@@ -19,4 +17,4 @@ mongoose
         console.log("Connection failed!", connectionError)
     )
 
-// module.exports = mongoose
+module.exports = mongoose

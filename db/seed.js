@@ -1,4 +1,4 @@
-var mongoose   = require("../models/shoes")
+var mongoose   = require("./connection")
 var seedData   = require("./seeds")
 
 var Shoes = mongoose.model("Shoes")
