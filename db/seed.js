@@ -3,7 +3,7 @@ var seedData   = require("./seeds")
 
 var Shoes = mongoose.model("Shoes")
 
-Shoe.remove({})
+Shoes.remove({})
 .then(() => {
     Shoes.collection.insert(seedData)
     .then(() => {
