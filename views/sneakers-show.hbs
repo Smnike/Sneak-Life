@@ -4,7 +4,9 @@
 <h2>{{shoes.type}} + {{shoes.brand}} is the flyest of them all!! They can be yours for only {{shoes.price}}</h2>
 
 <form action="/sneakers/{{shoe.type && shoe.brand}}?_method=put" method="post">
-    <input type="text" name="shoes[brand]]" placeholder="Shoe Name" value="{{shoes.type}}"/>
-    <input type="text" name="shoes[type]"
+    <input type="text" name="shoes[brand]]" placeholder="Shoe Brand" value="{{shoes.brand}}"/>
+    <input type="text" name="shoes[type]" placeholder="Shoe Name" value="{{shoes.name}}"/>
+    <input type="number" name="shoes[price]" placeholder="Damage" value="{{shoes.price}}"/>
+    <button type="submit">Update</button>
 
 </form>
