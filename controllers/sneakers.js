@@ -1,16 +1,12 @@
-const mongoose   = require("../models/shoes")
+const mongoose   = require("../db/connection")
 const Shoes      = mongoose.model("Shoes")
 const Router     = require("express").Router()
 
 Router.get("/", (req, res) => {
-    res.render("app-home")
-})
-
-Router.get("/sneakers", (req, res) => {
     Shoes
     .find({})
     .then(sneakers => {
-        res.render("sneaker-index", { shoes })
+        res.render("sneakers-index", { shoes })
     })
 })
 // Router.get("/sneakers", (req, res) => {
@@ -21,25 +17,25 @@ Router.get("/sneakers", (req, res) => {
 //     }
 // })
 
-Router.get("/sneakers/:name", (req, res) => {
+Router.get("/sneakers/:brand", (req, res) => {
     Shoes
-    .findOne({name: req.params.name})
-    .then(shoe => {
+    .findOne({brand: req.params.brand} && {name: req.params.name} && {price: req.params.price})
+    .then(shoes => {
         res.render("sneakers-show", { shoes })
     })
 })
 
 Router.post("/sneakers", (req, res) => {
     Shoes
-    .create(req.body.candidate)
-    .then(candidate => {
-        res.redirect(`/sneakers/${shoes.name}`)
+    .create(req.body.shoes)
+    .then(shoes => {
+        res.redirect(`/sneakers/${shoes.brand} && ${shoes.name} && ${shoes.price}`)
     })
 })
 
 Router.delete("/sneakers/:name", (req, res) => {
     Shoes
-    .findOneAndRemove({name: req.params.name})
+    .findOneAndRemove({brand: req.params.brand} && {name: req.params.name} && {price: req.params.price})
     .then(() => {
         res.redirect("/sneakers")
     })
@@ -47,9 +43,9 @@ Router.delete("/sneakers/:name", (req, res) => {
 
 Router.put("/sneakers/:name", (req, res) => {
     Shoes
-    .findOneAndUpdate({name: req.params.name}, req.body.candidate, {new: true})
-    .then(candidate => {
-        res.redirect(`/sneakers/${candidate.name}`)
+    .findOneAndUpdate({brand: req.params.brand} && {name: req.params.name} && {price: req.params.price}, req.body.shoes, {new: true})
+    .then(shoes => {
+        res.redirect(`/sneakers/${shoes.brand} && ${shoes.name} && ${shoes.price}`)
     })
 })
 

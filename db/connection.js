@@ -2,8 +2,8 @@
 const mongoose = require("./models/shoes")
 
 mongoose.Promise = Promise
-                    //link from?
-const mongoUri = "mongodb://localhost/sneaklife"
+
+const mongoUri = "mongodb://localhost/sneak-life"
 
 mongoose
     .connect(mongoUri, { useMongoClient: true })
