@@ -2,6 +2,8 @@ const express         = require("express")
 const hbs             = require("express-handlebars")
 const app             = express()
 const SneakController = require("./controllers/sneakers")
+const bodyParser      = require('body-parser')
+const methodOverride  = require('method-override')
 
 app.set("port", process.env.PORT || 3004)
 
@@ -15,6 +17,8 @@ app.engine(
         defaultLayout: "layout-main"
     })
 )
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
  //Gets the home page
 app.get("/", (req, res) => {
     res.render("app-home")

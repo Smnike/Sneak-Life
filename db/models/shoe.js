@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 var ShoesSchema = new mongoose.Schema(
     {
         brand: String,
-        type: String,
+        name: String,
         price: Number,
         athletes: Boolean
     }

@@ -10,15 +10,24 @@ Router.get("/", (req, res) => {
     })
 })
 
-Router.get("/sneakers", (req, res) => {
+Router.get("/:brand/:name", (req, res) => {
     Shoes
-    .find({})
-    .then(sneakers => {
-        res.render("sneakers-index", { sneakers })
+    .findOne({brand: req.params.brand})
+    .findOne({ name: req.params.name })
+    .then(shoe => {
+        res.render("sneakers-show", { shoe })
     })
 })
 
-// Router.get("/sneakers/:brand/:name", (req, res) => {
+// Router.get("/:name", (req, res) => {
+//     Shoes
+//     .find({})
+//     .then(sneakers => {
+//         res.render("sneakers-index", { sneakers })
+//     })
+// })
+
+// Router.get("/:brand/:name", (req, res) => {
 //     Shoes
 //     .findOne({brand: req.params.brand} && {name: req.params.name} && {price: req.params.price})
 //     .then(shoes => {
@@ -26,23 +35,23 @@ Router.get("/sneakers", (req, res) => {
 //     })
 // })
 
-// Router.post("/sneakers", (req, res) => {
-//     Shoes
-//     .create(req.body.shoes)
-//     .then(shoes => {
-//         res.redirect(`/sneakers/${shoes.brand} && ${shoes.name} && ${shoes.price}`)
-//     })
-// })
+Router.post("/sneakers", (req, res) => {
+    Shoes
+    .create(req.body.shoes)
+    .then(shoes => {
+        res.redirect(`/sneakers/${shoes.brand}/${shoes.name}`)
+    })
+})
 
-// Router.delete("/sneakers/:name", (req, res) => {
-//     Shoes
-//     .findOneAndRemove({brand: req.params.brand} && {name: req.params.name} && {price: req.params.price})
-//     .then(() => {
-//         res.redirect("/sneakers")
-//     })
-// })
+Router.delete("/sneakers/:name", (req, res) => {
+    Shoes
+    .findOneAndRemove({brand: req.params.brand}/{name: req.params.name}/{price: req.params.price})
+    .then(() => {
+        res.redirect("/sneakers")
+    })
+})
 
-// Router.put("/sneakers/:name", (req, res) => {
+// Router.put("/:name", (req, res) => {
 //     Shoes
 //     .findOneAndUpdate({brand: req.params.brand} && {name: req.params.name} && {price: req.params.price}, req.body.shoes, {new: true})
 //     .then(shoes => {

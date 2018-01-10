@@ -1,9 +1,9 @@
 // const mongoose = require("mongoose")
-const mongoose = require("./models/shoes")
+const mongoose = require("./models/shoe")
 
 mongoose.Promise = Promise
 
-const mongoUri = "mongodb://localhost/sneak-life"
+const mongoUri = "mongodb://localhost/sneaklife"
 
 mongoose
     .connect(mongoUri, { useMongoClient: true })
