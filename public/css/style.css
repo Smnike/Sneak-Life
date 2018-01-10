@@ -1,4 +1,11 @@
-.container {
+.vertical align {
     display: flex;
-    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    align-self: center;
+    background-image: url(AirMax270.jpg);
+    background-size: auto;
 }

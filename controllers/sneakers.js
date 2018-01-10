@@ -12,7 +12,7 @@ Router.get("/", (req, res) => {
 
 Router.get("/:brand/:name", (req, res) => {
     Shoes
-    .findOne({brand: req.params.brand})
+    .findOne({ brand: req.params.brand })
     .findOne({ name: req.params.name })
     .then(shoe => {
         res.render("sneakers-show", { shoe })
@@ -45,18 +45,20 @@ Router.post("/sneakers", (req, res) => {
 
 Router.delete("/sneakers/:name", (req, res) => {
     Shoes
-    .findOneAndRemove({brand: req.params.brand}/{name: req.params.name}/{price: req.params.price})
+    .findOneAndRemove({brand: req.params.brand})
+    .findOneAndRemove({name: req.params.name})
     .then(() => {
         res.redirect("/sneakers")
     })
 })
 
-// Router.put("/:name", (req, res) => {
-//     Shoes
-//     .findOneAndUpdate({brand: req.params.brand} && {name: req.params.name} && {price: req.params.price}, req.body.shoes, {new: true})
-//     .then(shoes => {
-//         res.redirect(`/sneakers/${shoes.brand} && ${shoes.name} && ${shoes.price}`)
-//     })
-// })
+Router.put("/:name", (req, res) => {
+    Shoes
+    .findOneAndUpdate({brand: req.params.brand}, req.body.shoes, {new: true})
+    // .findOneAndUpdate({name: req.params.name}, req.body.shoes, {new: true})
+    .then(shoes => {
+        res.redirect(`/sneakers/${shoes.brand}/${shoes.name}/${shoes.price}`)
+    })
+
 
 module.exports = Router

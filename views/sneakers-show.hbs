@@ -1,7 +1,11 @@
 {{#unless shoe}}
 <h1>That sneaker, unfortunately, cannot be found</h2>
 {{else}}
-<h2>{{shoe.brand}} + {{shoe.name}} is the flyest of them all!! They can be yours for only {{shoe.price}}</h2>
+<h4>The {{shoe.brand}} - {{shoe.name}} are the flyest of them all!!
+
+    <div class="divider #9c27b0 purple"></div>
+
+    Fortunately they can be yours for only ${{shoe.price}}</h4>
 
 <form action="/sneakers/{{shoe.brand}}/{{shoe.name}}?_method=put" method="post">
     <input type="text" name="shoes[brand]]" placeholder="Shoe Brand" value="{{shoe.brand}}"/>

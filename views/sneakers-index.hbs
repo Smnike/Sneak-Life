@@ -14,12 +14,14 @@
 
 
 {{#each sneakers as |sneaker index|}}
-<h3>
+<h5>
+    <ol>
     <a href="/sneakers/{{sneaker.brand}}/{{sneaker.name}}">{{sneaker.brand}} {{sneaker.name}} is the best shoe, at only {{sneaker.price}} and is {{sneaker.athletes}}</a>
-</h3>
+    </ol>
+</h5>
 {{/each}}
 
-<form action="/sneakers" method="post">
+<form class="text-align" action="/sneakers" method="post">
     <input type="text" name="shoe[brand]" placeholder="Maker (brand) of Kick's"/>
     <input type="text" name="shoe[name]" placeholder="Name of Kicks"/>
     <input type="number" name="shoe[price]" placeholder="Pocket Damage"/>
