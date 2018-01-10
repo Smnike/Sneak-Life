@@ -1,24 +1,4 @@
-body {
-    text-align: center;
-
-}
-
-h1 {
-    
-}
-
-h2 {
-
-}
-
-form {
-
-}
-
-input {
-
-}
-
-button {
-    
+.container {
+    display: flex;
+    justify-content: center;
 }
