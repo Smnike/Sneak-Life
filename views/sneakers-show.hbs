@@ -7,14 +7,26 @@
 
     Fortunately they can be yours for only ${{shoe.price}}</h4></div>
 
+<div class="row">
+<div class="center-align">
 <form action="/sneakers/{{shoe.brand}}/{{shoe.name}}?_method=put" method="post">
-    <input type="text" name="shoe[brand]" placeholder="Shoe Brand" value="{{shoe.brand}}"/>
-    <input type="text" name="shoe[name]" placeholder="Shoe Name" value="{{shoe.name}}"/>
+    <input type="text" name="shoe[brand]" placeholder="Maker (brand) of Kick's"/>
+    <input type="text" name="shoe[name]" placeholder="Name of Kicks"/>
+    <input type="number" name="shoe[price]" placeholder="Damage"/>
+    <button class="purple waves-effect waves-light btn" type="submit">Update</button>
+</form>
+</div>
+</div>
+{{!-- <form action="/sneakers/{{shoe.brand}}/{{shoe.name}}?_method=put" method="post">
+    <input type="text" name="shoe[brand]" placeholder="Maker (brand) of Kick's" value="{{shoe.brand}}"/>
+    <input type="text" name="shoe[name]" placeholder="Name of Kicks" value="{{shoe.name}}"/>
     <input type="number" name="shoe[price]" placeholder="Damage" value="{{shoe.price}}"/>
     <button class="waves-effect waves-light btn" type="submit">Update</button>
-</form>
+</form> --}}
 
+<div class="center-align">
 <form action="/sneakers/{{shoe.brand}}/{{shoe.name}}?_method=delete" method="post">
-    <button class="waves-effect waves-light btn" type="submit">Show Me!</button>
+    <button class="#00e676 green accent-3 waves-effect waves-light btn" type="submit">Delete</button>
 </form>
+</div>
 {{/unless}}

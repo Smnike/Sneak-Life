@@ -15,19 +15,21 @@
 
 {{#each sneakers as |sneaker index|}}
 <h5>
-    <div class="row">
+    <div class="row center-align">
     <div class="col s12"><a href="/sneakers/{{sneaker.brand}}/{{sneaker.name}}">{{sneaker.brand}} - {{sneaker.name}}  -->  Available at only ${{sneaker.price}}!!</a></div>
     </div>
 </h5>
 {{/each}}
 
+<div class="center-align">
 <div class="col s5 offset-s4">
 <form class="" action="/sneakers" method="post">
     <div class="input-field col s6"></div><input type="text" name="shoe[brand]" placeholder="Maker (brand) of Kick's"/>
     <input type="text" name="shoe[name]" placeholder="Name of Kicks"/>
     <input type="number" name="shoe[price]" placeholder="Pocket Damage"/>
-    <button type="submit">Enter Now</button>
+    <button class="purple waves-effect waves-light btn" type="submit">Enter Now</button>
 </form>
+</div>
 </div>
 
 {{!-- <div class="row">

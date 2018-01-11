@@ -38,11 +38,14 @@ Router.get("/:brand/:name", (req, res) => {
 Router.post("/sneakers", (req, res) => {
     Shoes.create(req.body.shoe)
     .then(shoe => {
-        res.redirect(`/sneakers/${shoe.brand}/${shoe.name}`)
+        res.redirect(`/sneakers`)
+    })
+    .catch((err) => {
+        console.log(err)
     })
 })
-
-Router.delete("/sneakers/:name", (req, res) => {
+// /${shoe.brand}/${shoe.name}
+Router.delete("/:brand/:name", (req, res) => {
     Shoes
     .findOneAndRemove({brand: req.params.brand})
     .findOneAndRemove({name: req.params.name})
@@ -51,12 +54,12 @@ Router.delete("/sneakers/:name", (req, res) => {
     })
 })
 
-Router.put("/:brand", (req, res) => {
+Router.put("/:brand/:name", (req, res) => {
     Shoes
     .findOneAndUpdate({brand: req.params.brand}, req.body.shoe, {new: true})
     // .findOneAndUpdate({name: req.params.name}, req.body.shoes, {new: true})
     .then(shoe => {
-        res.redirect(`/sneakers/${shoe.brand}`)
+        res.redirect(`/sneakers/${shoe.brand}/${shoe.name}`)
     })
 })
 module.exports = Router
