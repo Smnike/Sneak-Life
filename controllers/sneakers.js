@@ -35,7 +35,7 @@ Router.get("/:brand/:name", (req, res) => {
 //     })
 // })
 
-Router.post("/sneakers", (req, res) => {
+Router.post("/", (req, res) => {
     Shoes.create(req.body.shoe)
     .then(shoe => {
         res.redirect(`/sneakers`)
