@@ -15,15 +15,34 @@
 
 {{#each sneakers as |sneaker index|}}
 <h5>
-    <ol>
-    <a href="/sneakers/{{sneaker.brand}}/{{sneaker.name}}">{{sneaker.brand}} {{sneaker.name}} is the best shoe, at only {{sneaker.price}} and is {{sneaker.athletes}}</a>
-    </ol>
+    <div class="row">
+    <div class="col s12"><a href="/sneakers/{{sneaker.brand}}/{{sneaker.name}}">{{sneaker.brand}} - {{sneaker.name}}  -->  Available at only ${{sneaker.price}}!!</a></div>
+    </div>
 </h5>
 {{/each}}
 
-<form class="text-align" action="/sneakers" method="post">
-    <input type="text" name="shoe[brand]" placeholder="Maker (brand) of Kick's"/>
+<div class="col s5 offset-s4">
+<form class="" action="/sneakers" method="post">
+    <div class="input-field col s6"></div><input type="text" name="shoe[brand]" placeholder="Maker (brand) of Kick's"/>
     <input type="text" name="shoe[name]" placeholder="Name of Kicks"/>
     <input type="number" name="shoe[price]" placeholder="Pocket Damage"/>
     <button type="submit">Enter Now</button>
 </form>
+</div>
+
+{{!-- <div class="row">
+<form class="col s12" action="/sneakers" method="post">
+    <div class="input-field col s6">
+        <input type="text" name="shoe[brand]" placeholder="Maker (brand) of Kick's"/>
+    </div>
+    <div class="input-field col s6">
+        <input type="text" name="shoe[name]" placeholder="Name of Kicks"/>
+    </div>
+    <div class="input-field col s3">
+        <input type="number" name="shoe[price]" placeholder="Pocket Damage"/>
+    </div>
+    <div class="input-field ">
+        <button type="submit">Submit</button>
+    </div>
+</form>
+</div> --}}

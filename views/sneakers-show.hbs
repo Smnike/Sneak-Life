@@ -1,20 +1,20 @@
 {{#unless shoe}}
-<h1>That sneaker, unfortunately, cannot be found</h2>
+<h2>That sneaker, unfortunately, cannot be found</h2>
 {{else}}
-<h4>The {{shoe.brand}} - {{shoe.name}} are the flyest of them all!!
+<div class="center-align"><h4>The {{shoe.brand}} - {{shoe.name}} are the flyest of them all!!
 
     <div class="divider #9c27b0 purple"></div>
 
-    Fortunately they can be yours for only ${{shoe.price}}</h4>
+    Fortunately they can be yours for only ${{shoe.price}}</h4></div>
 
 <form action="/sneakers/{{shoe.brand}}/{{shoe.name}}?_method=put" method="post">
-    <input type="text" name="shoes[brand]]" placeholder="Shoe Brand" value="{{shoe.brand}}"/>
-    <input type="text" name="shoes[name]" placeholder="Shoe Name" value="{{shoe.name}}"/>
-    <input type="number" name="shoes[price]" placeholder="Damage" value="{{shoe.price}}"/>
-    <button type="submit">Update</button>
+    <input type="text" name="shoe[brand]" placeholder="Shoe Brand" value="{{shoe.brand}}"/>
+    <input type="text" name="shoe[name]" placeholder="Shoe Name" value="{{shoe.name}}"/>
+    <input type="number" name="shoe[price]" placeholder="Damage" value="{{shoe.price}}"/>
+    <button class="waves-effect waves-light btn" type="submit">Update</button>
 </form>
 
 <form action="/sneakers/{{shoe.brand}}/{{shoe.name}}?_method=delete" method="post">
-    <button type="submit">Show Me!</button>
+    <button class="waves-effect waves-light btn" type="submit">Show Me!</button>
 </form>
 {{/unless}}
