@@ -1,0 +1,8 @@
+.index-background {
+    background: url("red6.png");
+    /* background-image: url("red6.png"); */
+}
+
+body {
+    background: url("red6.png");
+}
