@@ -1,9 +1,23 @@
-/* .index-background {
-    background: url("red6.png"); */
-    /* background-image: url("red6.png"); */
-/* }
-
-body { */
-    /*Image from nicekicks.com*/
-    /* background-image: url("red6.png");
+/* body {
+    Image from nicekicks.com
+    background: url("/assets/images/red6.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 } */
+
+forms {
+    background-image: url("/assets/images/red6.png");
+}
+
+index-background {
+    margin: 100px;
+}
+
+brand-logo {
+    text-decoration-color: rgba(0, 0, 255, 0.747);
+}
+
+a {
+    
+}
