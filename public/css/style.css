@@ -6,11 +6,11 @@
     background-size: cover;
 } */
 
-forms {
-    background-image: url("/assets/images/red6.png");
+.background {
+    background: url("/assets/images/red6.png");
 }
 
-index-background {
+/* index-background {
     margin: 100px;
 }
 
@@ -20,4 +20,4 @@ brand-logo {
 
 a {
     
-}
+} */
