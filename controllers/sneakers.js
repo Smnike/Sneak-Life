@@ -2,38 +2,26 @@ const mongoose   = require("../db/connection")
 const Shoes      = mongoose.model("Shoes")
 const Router     = require("express").Router()
 
+//Turned to json
 Router.get("/", (req, res) => {
     Shoes
     .find({})
     .then(sneakers => {
-        res.render("sneakers-index", { sneakers })
+        //removed file path
+        res.json(sneakers)
     })
 })
 
+//Turned to json
 Router.get("/:brand/:name", (req, res) => {
     Shoes
     .findOne({ brand: req.params.brand })
     .findOne({ name: req.params.name })
     .then(shoe => {
-        res.render("sneakers-show", { shoe })
+        //removed file path
+        res.json(shoe)
     })
 })
-
-// Router.get("/:name", (req, res) => {
-//     Shoes
-//     .find({})
-//     .then(sneakers => {
-//         res.render("sneakers-index", { sneakers })
-//     })
-// })
-
-// Router.get("/:brand/:name", (req, res) => {
-//     Shoes
-//     .findOne({brand: req.params.brand} && {name: req.params.name} && {price: req.params.price})
-//     .then(shoes => {
-//         res.render("sneakers-show", { sneakers })
-//     })
-// })
 
 Router.post("/", (req, res) => {
     Shoes.create(req.body.shoe)

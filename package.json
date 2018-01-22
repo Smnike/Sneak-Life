@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Smnike/Sneak-Life#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "materialize-css": "^1.0.0-alpha.3",
