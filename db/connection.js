@@ -7,17 +7,19 @@ const mongoUri = "mongodb://localhost/sneaklife"
 
 if (process.env.NODE_ENV == "production") {
     mongoose.connect(process.env.MLAB_URL)
-  } else {
+} else {
+    //Would stick with one formatting convention.
     mongoose
-        .connect(mongoUri, { useMongoClient: true })
+        .connect(mongoUri, {
+            useMongoClient: true
+        })
         .then(connection =>
             console.log(
-                `Connection established to db
-    "${connection.db.databaseName}"`
+                `Connection established to db\n"${connection.db.databaseName}"`
             )
         )
         .catch(connectionError =>
             console.log("Connection failed!", connectionError)
         )
-  }
+}
 module.exports = mongoose

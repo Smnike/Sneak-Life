@@ -1,7 +1,7 @@
 const express         = require("express")
 const hbs             = require("express-handlebars")
 const app             = express()
-const SneakController = require("./controllers/sneakers")
+const SneakController = require("./controllers/sneakers") //nitpick: might call this SneakersController
 const bodyParser      = require('body-parser')
 const methodOverride  = require('method-override')
 

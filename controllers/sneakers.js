@@ -10,8 +10,19 @@ Router.get("/", (req, res) => {
     })
 })
 
+// Router.get("/:brand/:name", (req, res) => {
+//     Shoes
+
+// You can do this type of thing to filter on multiple fields (fields being brand, anme)
+//     .findOne({brand: req.params.brand, name: req.params.name} && {price: req.params.price})
+//     .then(shoes => {
+//         res.render("sneakers-show", { sneakers })
+//     })
+// })
+
 Router.get("/:brand/:name", (req, res) => {
     Shoes
+    
     .findOne({ brand: req.params.brand })
     .findOne({ name: req.params.name })
     .then(shoe => {
@@ -27,13 +38,7 @@ Router.get("/:brand/:name", (req, res) => {
 //     })
 // })
 
-// Router.get("/:brand/:name", (req, res) => {
-//     Shoes
-//     .findOne({brand: req.params.brand} && {name: req.params.name} && {price: req.params.price})
-//     .then(shoes => {
-//         res.render("sneakers-show", { sneakers })
-//     })
-// })
+
 
 Router.post("/", (req, res) => {
     Shoes.create(req.body.shoe)
@@ -47,8 +52,8 @@ Router.post("/", (req, res) => {
 // /${shoe.brand}/${shoe.name}
 Router.delete("/:brand/:name", (req, res) => {
     Shoes
-    .findOneAndRemove({brand: req.params.brand})
-    .findOneAndRemove({name: req.params.name})
+    .findOneAndRemove({name: req.params.name, brand: req.params.brand})
+    // .findOneAndRemove({name: req.params.name})
     .then(() => {
         res.redirect("/sneakers")
     })
@@ -63,4 +68,3 @@ Router.put("/:brand/:name", (req, res) => {
     })
 })
 module.exports = Router
-
