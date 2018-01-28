@@ -6,14 +6,21 @@
     background-size: cover;
 } */
 
-forms {
-    background-image: url("/assets/images/red6.png");
+.background {
+    background: url("/assets/images/red6.png");
 }
 
-index-background {
+/* index-background {
     margin: 100px;
 }
 
 brand-logo {
     text-decoration-color: rgba(0, 0, 255, 0.747);
 }
+<<<<<<< HEAD
+=======
+
+a {
+    
+} */
+>>>>>>> 475a811f61b44b0cf19e11e7d8159745fa2f0217
