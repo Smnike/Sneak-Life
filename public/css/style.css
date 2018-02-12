@@ -1,9 +1,44 @@
-/* .index-background {
-    background: url("red6.png"); */
-    /* background-image: url("red6.png"); */
-/* }
+body {
+    display: flex;
+    justify-content: center;
+    background-image: url("/assets/images/red6.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
-body { */
-    /*Image from nicekicks.com*/
-    /* background-image: url("red6.png");
+/* forms {
+    background-image: url("/assets/images/red6.png");
+}
+
+index-background {
+    margin: 100px;
+}
+
+brand-logo {
+    text-decoration-color: rgba(0, 0, 255, 0.747);
+    display: flex;
+    justify-content: center;
+    background: url("/assets/images/red6.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 } */
+
+#title {
+    display: flex;
+    justify-content: center;
+    size: 100px;
+}
+
+h1 {
+    font-size: 500px;
+}
+
+a {
+    font-size: 500px;
+}
+
+center-align {
+    font-size: 500px;
+}
