@@ -1,7 +1,16 @@
 body {
     display: flex;
     justify-content: center;
-    background-image: url("/assets/images/red6.png");
+    /* background-image: url("../images/red6.png"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    /* background-image: url("../images/red6.png"); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
