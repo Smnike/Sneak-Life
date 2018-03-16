@@ -1,20 +1,44 @@
-body {
+img#redDunk {
     display: flex;
-    justify-content: center;
-    /* background-image: url("../images/red6.png"); */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+
 }
 
-.background {
+div.parallax {
+    border: solid 1px red;
+}
+
+div.background {
+    background-image: url('https://i.pinimg.com/564x/f6/9f/11/f69f113d9dc990c5c153c9006c77d175.jpg');
+}
+
+
+/* body {
     display: flex;
     justify-content: center;
-    /* background-image: url("../images/red6.png"); */
+    background-image: url("https://i.pinimg.com/564x/f6/9f/11/f69f113d9dc990c5c153c9006c77d175.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
+} */
+
+/* img#firstBackground {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+/* .background {
+    display: flex;
+    justify-content: center;
+    background-image: url("../images/red6.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} */
+
+ div.collection-item {
+    color: red;
+} 
 
 /* forms {
     background-image: url("/assets/images/red6.png");
@@ -34,20 +58,42 @@ brand-logo {
     background-size: cover;
 } */
 
-#title {
+/* #title {
     display: flex;
     justify-content: center;
     size: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+} */
+
+/* a.waves-effect.waves-red {
+    display: flex;
+    justify-content: center;
+    size: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+} */
+
+a.waves-effect.waves-purple {
+    color: red;
+    /* display: flex;
+    justify-content: center;
+    size: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic; */
 }
 
-h1 {
+/* h1 {
     font-size: 500px;
-}
+    font-style: italic;
+    color: red;
+} */
 
-a {
+
+/* a {
     font-size: 500px;
 }
 
 center-align {
     font-size: 500px;
-}
+} */
